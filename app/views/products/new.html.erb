@@ -29,10 +29,10 @@ $(function() {
     var posting = $.post('/products', values)
     posting.done(function(data) {
       var product = data;
-      $('#name').text(prduct['name'])
-      $('#price').text(prduct['price'])
-      $('#description').text(prduct['description'])
-      $('#inventory').text(prduct['inventory'])
+      $('#name').text(product['name'])
+      $('#price').text(product['price'])
+      $('#description').text(product['description'])
+      $('#inventory').text(product['inventory'])
     })
   })
 })
