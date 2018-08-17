@@ -27,11 +27,12 @@ $(function() {
     event.preventDefault();
     var values = $(this).serialize();
     var posting = $.post('/products', values)
-    posting.done(function(data) {
-      $('#name').text(data['name'])
-      $('#price').text(data['price'])
-      $('#description').text(data['description'])
-      $('#inventory').text(data['inventory'])
+    posting.done(function(data) {\
+      var product = data
+      $('#name').text(product['name'])
+      $('#price').text(product['price'])
+      $('#description').text(product['description'])
+      $('#inventory').text(product['inventory'])
     })
   })
 })
