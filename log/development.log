@@ -2008,3 +2008,14 @@ Processing by ProductsController#create as */*
   [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.83ms)
 Completed 201 Created in 9ms (Views: 2.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:32:32 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QHAYNPNRAZQi1fl6FWbEbW1Q4uZybOv+s38nxADkMsNFAawBG0zLU4/ienDGAd5qn5IzjlwuAW3DZWWTxIwfVg==", "product"=>{"name"=>"NYC Street Art", "price"=>"$1.00", "description"=>"whatever", "inventory"=>"3"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "NYC Street Art"], ["description", "whatever"], ["inventory", 3], ["price", 0], ["created_at", "2018-08-17 19:32:32.659090"], ["updated_at", "2018-08-17 19:32:32.659090"]]
+  [1m[35m (67.5ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 72ms (Views: 0.8ms | ActiveRecord: 67.8ms)
