@@ -1784,3 +1784,332 @@ Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127
 Processing by ProductsController#new as HTML
   Rendered products/new.html.erb within layouts/application (2.7ms)
 Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:15:19 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (715.5ms)
+Completed 200 OK in 966ms (Views: 944.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:15:34 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4jQr999SJCdTragA81K8zD+oddWt5o57sRHGC984GhS+WSaN2CCVzB5NarQqlD0wjxwv3j1cKqe3gVP6xTN/Q==", "product"=>{"name"=>"Another Widger", "price"=>"$1.00", "description"=>"Awesome looking widget", "inventory"=>"0"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Another Widger"], ["description", "Awesome looking widget"], ["inventory", 0], ["price", 0], ["created_at", "2018-08-17 19:15:34.298335"], ["updated_at", "2018-08-17 19:15:34.298335"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Redirected to http://67.205.152.27:43658/products
+Completed 200 OK in 10ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/products" for 73.193.248.224 at 2018-08-17 19:15:34 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/23.json" for 73.193.248.224 at 2018-08-17 19:15:40 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 23]]
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 23]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (34.3ms)
+Completed 200 OK in 69ms (Views: 60.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:16:56 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 39ms (Views: 26.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:17:12 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+z8/H93hN0sllyEgFStkaqcw6cyXV9wUTIb2YD/DVzenUjJl2pOGoGh345TM7eWWF4SzxwfteMhKFmORJcgyQ==", "product"=>{"name"=>"New Widget", "price"=>"$1.00", "description"=>"Just a cool widget", "inventory"=>"5"}}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "New Widget"], ["description", "Just a cool widget"], ["inventory", 5], ["price", 0], ["created_at", "2018-08-17 19:17:12.988748"], ["updated_at", "2018-08-17 19:17:12.988748"]]
+  [1m[35m (5.9ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.12ms)
+Completed 201 Created in 20ms (Views: 10.0ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:17:31 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+z8/H93hN0sllyEgFStkaqcw6cyXV9wUTIb2YD/DVzenUjJl2pOGoGh345TM7eWWF4SzxwfteMhKFmORJcgyQ==", "product"=>{"name"=>"New Widget", "price"=>"$1.00", "description"=>"Just a cool widget", "inventory"=>"5"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "New Widget"], ["description", "Just a cool widget"], ["inventory", 5], ["price", 0], ["created_at", "2018-08-17 19:17:31.532917"], ["updated_at", "2018-08-17 19:17:31.532917"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:17:36 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+z8/H93hN0sllyEgFStkaqcw6cyXV9wUTIb2YD/DVzenUjJl2pOGoGh345TM7eWWF4SzxwfteMhKFmORJcgyQ==", "product"=>{"name"=>"New Widget", "price"=>"$1.00", "description"=>"Just a cool widget", "inventory"=>"5"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "New Widget"], ["description", "Just a cool widget"], ["inventory", 5], ["price", 0], ["created_at", "2018-08-17 19:17:36.046752"], ["updated_at", "2018-08-17 19:17:36.046752"]]
+  [1m[35m (82.2ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 87ms (Views: 0.6ms | ActiveRecord: 82.6ms)
+
+
+Started GET "/products" for 73.193.248.224 at 2018-08-17 19:18:12 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:18:30 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:19:00 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:19:03 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 23.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:19:23 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dJVuCgb6Lny/l6COozvUBGfm7KYQrE5pMmf7bt7iBltx5No/7ufkuxKgI4RwXM4DlSQ9zj7upPpCfbk5Goorzg==", "product"=>{"name"=>"Macbook 2105", "price"=>"1600", "description"=>"User macbook pro", "inventory"=>"1"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Macbook 2105"], ["description", "User macbook pro"], ["inventory", 1], ["price", 1600], ["created_at", "2018-08-17 19:19:23.690276"], ["updated_at", "2018-08-17 19:19:23.690276"]]
+  [1m[35m (37.5ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 49ms (Views: 7.1ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:21:10 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:21:31 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zI1sGBELLqb4/XTeUze8f3ulEERPMxDaLSHupd5lCTXJ/Ngt+RbkYVXK99SAUKZ4iWfBLGFx+kldO6zyGg0koA==", "product"=>{"name"=>"Blacklight", "price"=>"$20", "description"=>"makes everything more fun", "inventory"=>"3"}, "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Blacklight"], ["description", "makes everything more fun"], ["inventory", 3], ["price", 0], ["created_at", "2018-08-17 19:21:31.825696"], ["updated_at", "2018-08-17 19:21:31.825696"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:21:42 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zI1sGBELLqb4/XTeUze8f3ulEERPMxDaLSHupd5lCTXJ/Ngt+RbkYVXK99SAUKZ4iWfBLGFx+kldO6zyGg0koA==", "product"=>{"name"=>"Blacklight", "price"=>"$20", "description"=>"makes everything more fun", "inventory"=>"3"}, "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Blacklight"], ["description", "makes everything more fun"], ["inventory", 3], ["price", 0], ["created_at", "2018-08-17 19:21:42.110163"], ["updated_at", "2018-08-17 19:21:42.110163"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:21:56 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zI1sGBELLqb4/XTeUze8f3ulEERPMxDaLSHupd5lCTXJ/Ngt+RbkYVXK99SAUKZ4iWfBLGFx+kldO6zyGg0koA==", "product"=>{"name"=>"Blacklight", "price"=>"$20", "description"=>"makes everything more fun", "inventory"=>"3"}, "commit"=>"submit"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Blacklight"], ["description", "makes everything more fun"], ["inventory", 3], ["price", 0], ["created_at", "2018-08-17 19:21:56.037584"], ["updated_at", "2018-08-17 19:21:56.037584"]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.18ms)
+Completed 201 Created in 8ms (Views: 0.8ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:22:01 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zI1sGBELLqb4/XTeUze8f3ulEERPMxDaLSHupd5lCTXJ/Ngt+RbkYVXK99SAUKZ4iWfBLGFx+kldO6zyGg0koA==", "product"=>{"name"=>"Blacklight", "price"=>"$20", "description"=>"makes everything more fun", "inventory"=>"3"}, "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Blacklight"], ["description", "makes everything more fun"], ["inventory", 3], ["price", 0], ["created_at", "2018-08-17 19:22:01.232004"], ["updated_at", "2018-08-17 19:22:01.232004"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:22:10 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:22:20 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aJNtqhHqetNSsLnYDDJaQQqp0IMfkyB8GDnfPHP3l8Bt4tmf+fewFP+HOtLfVUBG+GsB6zHRyu9oI51rt5+6VQ==", "product"=>{"name"=>"NYC Street Art", "price"=>"$1.00", "description"=>"whatver", "inventory"=>"5"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "NYC Street Art"], ["description", "whatver"], ["inventory", 5], ["price", 0], ["created_at", "2018-08-17 19:22:20.454368"], ["updated_at", "2018-08-17 19:22:20.454368"]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.14ms)
+Completed 201 Created in 11ms (Views: 1.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/products" for 73.193.248.224 at 2018-08-17 19:22:42 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:22:51 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 71ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:24:31 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QHAYNPNRAZQi1fl6FWbEbW1Q4uZybOv+s38nxADkMsNFAawBG0zLU4/ienDGAd5qn5IzjlwuAW3DZWWTxIwfVg==", "product"=>{"name"=>"NYC Street Art", "price"=>"$1.00", "description"=>"whatever", "inventory"=>"3"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "NYC Street Art"], ["description", "whatever"], ["inventory", 3], ["price", 0], ["created_at", "2018-08-17 19:24:32.004803"], ["updated_at", "2018-08-17 19:24:32.004803"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.18ms)
+Completed 201 Created in 48ms (Views: 12.5ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:29:25 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QHAYNPNRAZQi1fl6FWbEbW1Q4uZybOv+s38nxADkMsNFAawBG0zLU4/ienDGAd5qn5IzjlwuAW3DZWWTxIwfVg==", "product"=>{"name"=>"NYC Street Art", "price"=>"$1.00", "description"=>"whatever", "inventory"=>"3"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "NYC Street Art"], ["description", "whatever"], ["inventory", 3], ["price", 0], ["created_at", "2018-08-17 19:29:25.338555"], ["updated_at", "2018-08-17 19:29:25.338555"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.83ms)
+Completed 201 Created in 9ms (Views: 2.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:32:32 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QHAYNPNRAZQi1fl6FWbEbW1Q4uZybOv+s38nxADkMsNFAawBG0zLU4/ienDGAd5qn5IzjlwuAW3DZWWTxIwfVg==", "product"=>{"name"=>"NYC Street Art", "price"=>"$1.00", "description"=>"whatever", "inventory"=>"3"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "NYC Street Art"], ["description", "whatever"], ["inventory", 3], ["price", 0], ["created_at", "2018-08-17 19:32:32.659090"], ["updated_at", "2018-08-17 19:32:32.659090"]]
+  [1m[35m (67.5ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 72ms (Views: 0.8ms | ActiveRecord: 67.8ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:34:32 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (677.2ms)
+Completed 200 OK in 896ms (Views: 895.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:34:42 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (87.7ms)
+Completed 200 OK in 108ms (Views: 106.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:34:58 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tz9NP7a9UNK1Mv0K1i/skIofbtMQd+shjp//A1WNL72yTvkKXqCaFRgFfgAFSPaXeN2/uz41AbL+hb1UkeUCKA==", "product"=>{"name"=>"NYC Street Art", "price"=>"$1.00", "description"=>"asdfasf", "inventory"=>"5"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "NYC Street Art"], ["description", "asdfasf"], ["inventory", 5], ["price", 0], ["created_at", "2018-08-17 19:34:58.654437"], ["updated_at", "2018-08-17 19:34:58.654437"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:37:00 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:37:12 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iezKF88Mf12T8oHG4Fp1ixeMV+b7gehwJq2H762yXtiMnX4iJxG1mj7FAswzPW+M5U6GjtXDAuNWt8W4adpzTQ==", "product"=>{"name"=>"Macbook 2105", "price"=>"1600", "description"=>"best one yet", "inventory"=>"5"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Macbook 2105"], ["description", "best one yet"], ["inventory", 5], ["price", 1600], ["created_at", "2018-08-17 19:37:12.333995"], ["updated_at", "2018-08-17 19:37:12.333995"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:37:44 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:37:51 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"geIAdIoTGP1uuB7NzLywDydmmDj59BRY0ssTNz8d4ECEk7RBYg7SOsOPnccf26oI1aRJUNe2/sui0VFg+3XN1Q==", "product"=>{"name"=>"Macbook 2105", "price"=>"1600", "description"=>"bgasera", "inventory"=>"5"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Macbook 2105"], ["description", "bgasera"], ["inventory", 5], ["price", 1600], ["created_at", "2018-08-17 19:37:51.665160"], ["updated_at", "2018-08-17 19:37:51.665160"]]
+  [1m[36m (62.6ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 67ms (Views: 0.5ms | ActiveRecord: 63.8ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:37:56 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"geIAdIoTGP1uuB7NzLywDydmmDj59BRY0ssTNz8d4ECEk7RBYg7SOsOPnccf26oI1aRJUNe2/sui0VFg+3XN1Q==", "product"=>{"name"=>"Macbook 2105", "price"=>"1600", "description"=>"bgasera", "inventory"=>"5"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Macbook 2105"], ["description", "bgasera"], ["inventory", 5], ["price", 1600], ["created_at", "2018-08-17 19:37:56.204162"], ["updated_at", "2018-08-17 19:37:56.204162"]]
+  [1m[35m (23.0ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 27ms (Views: 0.6ms | ActiveRecord: 23.4ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:37:56 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"geIAdIoTGP1uuB7NzLywDydmmDj59BRY0ssTNz8d4ECEk7RBYg7SOsOPnccf26oI1aRJUNe2/sui0VFg+3XN1Q==", "product"=>{"name"=>"Macbook 2105", "price"=>"1600", "description"=>"bgasera", "inventory"=>"5"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Macbook 2105"], ["description", "bgasera"], ["inventory", 5], ["price", 1600], ["created_at", "2018-08-17 19:37:56.700140"], ["updated_at", "2018-08-17 19:37:56.700140"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:37:56 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"geIAdIoTGP1uuB7NzLywDydmmDj59BRY0ssTNz8d4ECEk7RBYg7SOsOPnccf26oI1aRJUNe2/sui0VFg+3XN1Q==", "product"=>{"name"=>"Macbook 2105", "price"=>"1600", "description"=>"bgasera", "inventory"=>"5"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Macbook 2105"], ["description", "bgasera"], ["inventory", 5], ["price", 1600], ["created_at", "2018-08-17 19:37:56.956432"], ["updated_at", "2018-08-17 19:37:56.956432"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 5ms (Views: 0.4ms | ActiveRecord: 2.3ms)
