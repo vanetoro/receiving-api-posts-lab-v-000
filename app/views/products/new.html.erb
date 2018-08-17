@@ -29,9 +29,9 @@ $(function() {
     var posting = $.post('/products', values)
     posting.done(function(data) {
       $('#name').text(data['name'])
-      $('price').text(data['price'])
-      $('description').text(data['description'])
-      $('inventory').text(data['inventory'])
+      $('#price').text(data['price'])
+      $('#description').text(data['description'])
+      $('#inventory').text(data['inventory'])
     })
   })
 })
