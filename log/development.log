@@ -1821,3 +1821,10 @@ Processing by ProductsController#show as JSON
 [active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 23]]
 [active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (34.3ms)
 Completed 200 OK in 69ms (Views: 60.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:16:56 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 39ms (Views: 26.2ms | ActiveRecord: 1.4ms)
