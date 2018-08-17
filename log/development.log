@@ -1883,3 +1883,21 @@ Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127
 Processing by ProductsController#new as HTML
   Rendered products/new.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 73.193.248.224 at 2018-08-17 19:19:03 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 23.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/products" for 73.193.248.224 at 2018-08-17 19:19:23 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dJVuCgb6Lny/l6COozvUBGfm7KYQrE5pMmf7bt7iBltx5No/7ufkuxKgI4RwXM4DlSQ9zj7upPpCfbk5Goorzg==", "product"=>{"name"=>"Macbook 2105", "price"=>"1600", "description"=>"User macbook pro", "inventory"=>"1"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Macbook 2105"], ["description", "User macbook pro"], ["inventory", 1], ["price", 1600], ["created_at", "2018-08-17 19:19:23.690276"], ["updated_at", "2018-08-17 19:19:23.690276"]]
+  [1m[35m (37.5ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 49ms (Views: 7.1ms | ActiveRecord: 38.0ms)
