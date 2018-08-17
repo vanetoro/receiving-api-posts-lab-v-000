@@ -24,7 +24,7 @@
 <script type="text/javascript" charset="utf-8">
 $(function() {
   $('form').submit(function(event) {
-    event.preventDefault()
+    event.preventDefault();
     var values = $(this).serialize();
     var posting = $.post('/products', values)
     posting.done(function(data) {
